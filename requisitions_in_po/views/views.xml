@@ -7,16 +7,20 @@
       <field name="inherit_id" ref="purchase.purchase_order_form" />
       <field name="arch" type="xml">
 
-        <xpath expr="//group[@name='invoice_info']" position="after">     
-          <group>
-            <field name="requisition_ids" string="Requisiones" label="Requisiiones"/>
-          </group>                    
-          
+        <xpath expr="//page[2]/group[1]" position="after">
+
+          <separator string="  " />
+          <h1>
+            <label for="requisition_ids" string="Requisiciones" />
+          </h1>
+
+          <field name="requisition_ids" string="Requisiciones" label="Requisiciones" />
+
         </xpath>
 
       </field>
     </record>
-    
+
   </data>
 
 </odoo>
